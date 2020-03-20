@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-lg-2dot4 col-md-2dot4 mb-2dot4" *ngFor = "let product of products">
+    <div class="card h-100">
+        <a href="#"><img class="card-img-top" [src]="product.img" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">{{product.name}}</a>
+          </h4>
+          <h5>${{product.price}}</h5>
+          <p class="card-text">{{product.desc}}</p>
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-primary btn-lg" (click)="showDetail(product)">CHI TIẾT</button>
+          <button type="button" class="btn btn-danger btn-lg" (click)="removeItem(product.id)">DELETE</button>
+        </div>
+        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+      </div>
+    </div>
+    </div>
+    <p *ngIf="selected">{{selected.name}}</p>
+<br>
+<br>
+
+
+<div class="row">
+  <div class="col-lg-2dot4 col-md-2dot4 mb-2dot4" *ngFor = "let product1 of product1">
+  <div class="card h-100">
+      <a href="#"><img class="card-img-top" [src]='product1.img'></a>
+      <div class="card-body">
+        <h4 class="card-title">
+          <a href="#">{{product1.name}}</a>
+        </h4>
+        <h5>${{product1.price}}</h5>
+        <p class="card-text">{{product1.desc}}</p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary btn-lg" (click)="showDetail1(product1)">CHI TIẾT</button>
+        <button type="button" class="btn btn-danger btn-lg" (click)="removeItem1(product1.id1)">DELETE</button>
+      </div>
+      <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+    </div>
+  </div>
+  </div>
+  <p *ngIf="selected1">{{selected1.name}}</p>
+    <br>
